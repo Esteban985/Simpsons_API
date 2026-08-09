@@ -1,0 +1,132 @@
+.simpson-login-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top center, #fff46a 0%, #f4c72d 30%, #f7b700 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.simpson-card {
+  position: relative;
+  width: min(100%, 420px);
+  background: rgba(18, 23, 67, 0.96);
+  border: 4px solid #ffdd57;
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.simpson-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #ffd200;
+  opacity: 0.55;
+  filter: blur(6px);
+}
+
+.simpson-card::after {
+  content: "D'OH!";
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.2em;
+}
+
+.simpson-brand {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.simpson-title {
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+  color: #ffe56d;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  letter-spacing: 0.18em;
+  margin-bottom: 0.35rem;
+  text-shadow: 0 0 10px rgba(255, 237, 101, 0.4);
+}
+
+.simpson-subtitle {
+  color: #fff;
+  font-size: 0.98rem;
+  opacity: 0.85;
+}
+
+.simpson-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.simpson-logo span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #ffcc00;
+  box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.12);
+  color: #13194a;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.simpson-card .form-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.simpson-card .form-control {
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.simpson-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.simpson-card .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 221, 87, 0.25);
+  border-color: #ffd93e;
+}
+
+.simpson-card .btn-warning {
+  border-radius: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: #ffcd00;
+  border-color: #ffcd00;
+  color: #331c04;
+}
+
+.simpson-card .btn-warning:hover,
+.simpson-card .btn-warning:focus {
+  background: #ffd84a;
+  border-color: #ffd84a;
+}
+
+.simpson-hint {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 576px) {
+  .simpson-card {
+    border-width: 3px;
+    padding: 1.5rem;
+  }
+}

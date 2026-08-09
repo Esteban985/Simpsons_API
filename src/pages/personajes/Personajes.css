@@ -1,0 +1,166 @@
+.simpson-personajes-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #fff7a3 0%, #ffd000 25%, #ff9900 68%, #0d164a 100%);
+  color: #1d2045;
+}
+
+.simpson-personajes-section {
+  padding: 3.5rem 0 5rem;
+}
+
+.simpson-personajes-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.simpson-personajes-header .simpson-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #3d2b00;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 30px rgba(26, 34, 84, 0.16);
+}
+
+.simpson-personajes-title {
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+  font-size: clamp(2.8rem, 4vw, 4.4rem);
+  line-height: 1.02;
+  letter-spacing: 0.06em;
+  margin: 0;
+  color: #171a43;
+  text-shadow: 0 0 18px rgba(255, 221, 66, 0.2);
+}
+
+.simpson-personajes-description {
+  max-width: 720px;
+  font-size: 1.04rem;
+  color: #1a1b44;
+  opacity: 0.9;
+}
+
+.simpson-search-group {
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 50px rgba(23, 31, 76, 0.18);
+}
+
+.simpson-search-group .input-group-text {
+  border: none;
+  background: transparent;
+  color: #3c2a03;
+  font-size: 1.15rem;
+  padding: 0.85rem 1rem;
+}
+
+.simpson-search-group .form-control {
+  border: none;
+  background: transparent;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f1f3f;
+}
+
+.simpson-search-group .form-control::placeholder {
+  color: rgba(31, 31, 63, 0.55);
+}
+
+.simpson-search-group .form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.simpson-personajes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.simpson-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem 1rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 20px 45px rgba(23, 31, 76, 0.14);
+}
+
+.btn-page {
+  min-width: 140px;
+  border-radius: 999px;
+  padding: 0.85rem 1.4rem;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-page:hover,
+.btn-page:focus {
+  transform: translateY(-2px);
+}
+
+.btn-page-prev {
+  background: #ffcc00;
+  border: none;
+  color: #1e1b03;
+  box-shadow: 0 14px 28px rgba(255, 167, 0, 0.18);
+}
+
+.btn-page-next {
+  background: #1d255d;
+  border: none;
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(29, 40, 97, 0.18);
+}
+
+.simpson-page-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(13, 22, 74, 0.95);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.simpson-page-indicator span {
+  display: inline-flex;
+  margin: 0 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 221, 87, 0.15);
+  color: #ffeb7a;
+}
+
+@media (max-width: 576px) {
+  .simpson-pagination {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn-page {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .simpson-personajes-section {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+  }
+}
