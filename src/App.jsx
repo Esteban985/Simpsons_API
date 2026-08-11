@@ -4,6 +4,7 @@ import { Login } from './pages/login'
 import { SimpsonProvider } from './context/simpsonContext'
 import { Home } from './pages/Home'
 import { Personajes } from './pages/personajes'
+import { DetallesPersonajes } from './pages/DetallesPersonajes'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
             <Route path='/' element={<Login />} />
             <Route path='/home' element={<Home />} />
             <Route path='/personajes' element={<Personajes />} />
+            <Route path='/detalles/:id' element={<DetallesPersonajes />} />
             <Route path='/favoritos' element={<h1>Favoritos</h1>} />
           </Routes>
         </SimpsonProvider>

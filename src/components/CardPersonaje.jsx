@@ -1,8 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './CardPersonaje.css';
+import { NavLink, useNavigate } from 'react-router';
 
-const CardPersonaje = ({ name, occupation, status, portrait_path }) => {
+const CardPersonaje = ({ name, occupation, status, portrait_path, id }) => {
+    const navigate = useNavigate()
+
     return (
         <Card className="personaje-card">
             <div className="personaje-card-image-wrapper">
@@ -20,7 +23,10 @@ const CardPersonaje = ({ name, occupation, status, portrait_path }) => {
                     <span className="personaje-badge">Simpson Style</span>
                 </div>
                 <div className="personaje-actions">
-                    <Button className="btn-personaje btn-personaje-primary">Ver detalles</Button>
+                    <NavLink
+                        className="btn btn-personaje btn-personaje-primary"
+                        to={`/detalles/${id}`}
+                    >Ver detalles</NavLink>
                     <Button className="btn-personaje btn-personaje-secondary">Agregar favoritos</Button>
                 </div>
             </Card.Body>
