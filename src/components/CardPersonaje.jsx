@@ -2,35 +2,51 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './CardPersonaje.css';
 import { NavLink, useNavigate } from 'react-router';
+import { useContext } from 'react';
+import { SimpsonContext } from '../context/simpsonContext';
 
-const CardPersonaje = ({ name, occupation, status, portrait_path, id }) => {
-    const navigate = useNavigate()
+const CardPersonaje = ({ name, occupation, status, portrait_path, id, favorito }) => {
+    const {
+        agregarFavorito,
+        eliminarFavorito,
+    } = useContext(SimpsonContext)
 
     return (
-        <Card className="personaje-card">
-            <div className="personaje-card-image-wrapper">
-                <Card.Img variant="top" src={`https://cdn.thesimpsonsapi.com/500${portrait_path}`} />
-            </div>
-            <Card.Body className="personaje-card-body">
-                <div>
-                    <Card.Title className="personaje-card-title">{name}</Card.Title>
-                    <Card.Text className="personaje-card-text">
-                        {occupation == 'Unknown' ? 'Ocupación no definida' : occupation}
-                    </Card.Text>
+        <>
+            <Card className="personaje-card">
+                <div className="personaje-card-image-wrapper">
+                    <Card.Img variant="top" src={`https://cdn.thesimpsonsapi.com/500${portrait_path}`} />
                 </div>
-                <div className="personaje-card-meta">
-                    <span className="personaje-badge">{status}</span>
-                    <span className="personaje-badge">Simpson Style</span>
-                </div>
-                <div className="personaje-actions">
-                    <NavLink
-                        className="btn btn-personaje btn-personaje-primary"
-                        to={`/detalles/${id}`}
-                    >Ver detalles</NavLink>
-                    <Button className="btn-personaje btn-personaje-secondary">Agregar favoritos</Button>
-                </div>
-            </Card.Body>
-        </Card>
+                <Card.Body className="personaje-card-body">
+                    <div>
+                        <Card.Title className="personaje-card-title">{name}</Card.Title>
+                        <Card.Text className="personaje-card-text">
+                            {occupation == 'Unknown' ? 'Ocupación no definida' : occupation}
+                        </Card.Text>
+                    </div>
+                    <div className="personaje-card-meta">
+                        <span className="personaje-badge">{status}</span>
+                        <span className="personaje-badge">Simpson Style</span>
+                    </div>
+                    <div className="personaje-actions">
+                        <NavLink
+                            className="btn btn-personaje btn-personaje-primary"
+                            to={`/detalles/${id}`}
+                        >Ver detalles</NavLink>
+                        {!favorito ? (
+                            <Button
+                                className="btn-personaje btn-personaje-secondary"
+                                onClick={() => agregarFavorito(id)}
+                            >Agregar favoritos</Button>
+                        ) :
+                            <Button
+                                className="btn-personaje btn-personaje-secondary"
+                                onClick={() => eliminarFavorito(id)}
+                            >Eliminar de Favoritos</Button>}
+                    </div>
+                </Card.Body>
+            </Card>
+        </>
     );
 }
 

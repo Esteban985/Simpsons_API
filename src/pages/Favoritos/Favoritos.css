@@ -1,0 +1,171 @@
+.simpson-favoritos-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(255, 221, 87, 0.78), transparent 25%),
+    linear-gradient(145deg, #fff8e7 0%, #ffe6aa 48%, #f7a36b 100%);
+  color: #242044;
+}
+
+.simpson-favoritos-section {
+  padding: 2rem 0 5rem;
+}
+
+.simpson-favoritos-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 4.5rem;
+}
+
+.simpson-favoritos-back,
+.simpson-favoritos-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.simpson-favoritos-back {
+  padding: 0.7rem 1.1rem;
+  border: 2px solid #242044;
+  color: #242044;
+}
+
+.simpson-favoritos-back:hover,
+.simpson-favoritos-back:focus-visible {
+  transform: translateY(-2px);
+  background: #242044;
+  color: #fff;
+}
+
+.simpson-favoritos-count {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #8e3c45;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.simpson-favoritos-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 760px;
+  margin-bottom: 2.75rem;
+}
+
+.simpson-favoritos-mark {
+  display: grid;
+  flex: 0 0 76px;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 24px 24px 24px 6px;
+  background: #d94f5c;
+  color: #fff8e7;
+  font-size: 2.2rem;
+  box-shadow: 10px 12px 0 rgba(142, 60, 69, 0.16);
+  transform: rotate(-5deg);
+}
+
+.simpson-favoritos-eyebrow {
+  color: #8e3c45;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.simpson-favoritos-title {
+  margin: 0.3rem 0 0.6rem;
+  color: #242044;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+  font-size: clamp(2.2rem, 5vw, 4.6rem);
+  line-height: 1;
+}
+
+.simpson-favoritos-description {
+  max-width: 560px;
+  margin: 0;
+  color: #584b5a;
+  font-size: 1.05rem;
+}
+
+.simpson-favoritos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 280px));
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.simpson-favoritos-empty {
+  max-width: 620px;
+  padding: 4rem 2rem;
+  border: 2px dashed rgba(142, 60, 69, 0.42);
+  border-radius: 1.5rem;
+  background: rgba(255, 248, 231, 0.58);
+  text-align: center;
+}
+
+.simpson-favoritos-empty-icon {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #d94f5c;
+  font-size: 3.5rem;
+}
+
+.simpson-favoritos-empty h2 {
+  margin-bottom: 0.5rem;
+  color: #242044;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+}
+
+.simpson-favoritos-empty p {
+  margin-bottom: 1.5rem;
+  color: #584b5a;
+}
+
+.simpson-favoritos-action {
+  padding: 0.85rem 1.3rem;
+  background: #242044;
+  color: #fff;
+}
+
+.simpson-favoritos-action:hover,
+.simpson-favoritos-action:focus-visible {
+  transform: translateY(-2px);
+  background: #d94f5c;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .simpson-favoritos-section {
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  .simpson-favoritos-toolbar {
+    margin-bottom: 3rem;
+  }
+
+  .simpson-favoritos-header {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .simpson-favoritos-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .simpson-favoritos-mark {
+    flex-basis: 58px;
+    width: 58px;
+    height: 58px;
+    border-radius: 18px 18px 18px 5px;
+    font-size: 1.7rem;
+  }
+}

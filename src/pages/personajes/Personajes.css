@@ -4,6 +4,33 @@
   color: #1d2045;
 }
 
+.simpson-personajes-page > button {
+  margin: 1.5rem 0 0 1rem;
+  padding: 0.75rem 1.4rem;
+  border: 2px solid #1d255d;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1d255d;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(23, 31, 76, 0.16);
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.simpson-personajes-page > button + button {
+  margin-left: 0.5rem;
+  background: #1d255d;
+  color: #fff;
+}
+
+.simpson-personajes-page > button:hover,
+.simpson-personajes-page > button:focus-visible {
+  transform: translateY(-2px);
+  background: #ffcc00;
+  color: #1e1b03;
+  outline: none;
+}
+
 .simpson-personajes-section {
   padding: 3.5rem 0 5rem;
 }
